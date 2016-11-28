@@ -1,0 +1,22 @@
+{{!< default}}
+
+{{#post}}
+
+<article class="post-container post-container--single">
+
+<section class="{{post_class}}">
+{{!-- 邮件订阅表单 --}}
+{{#if @labs.subscribers}}
+<section class="gh-subscribe">
+  <h3 class="gh-subscribe-title">订阅我的博客 {{@blog.title}}</h3>
+  <p>通过邮件订阅 </p>
+  {{subscribe_form placeholder="Your email address"}}
+  <span class="gh-subscribe-rss">OR <a href="{{@blog.url}}/rss/">通过 RSS订阅</a></span>
+</section>
+{{/if}}
+</section>
+
+</article>
+
+
+{{/post}}

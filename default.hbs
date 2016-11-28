@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    {{!
+    <script src='http://ghost-10039837.file.myqcloud.com/js/NProgress/nprogress.js'></script>
+    <link rel='stylesheet' href='http://ghost-10039837.file.myqcloud.com/js/NProgress/nprogress.css'/>
+    }}
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}">
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta name="twitter:description" content="{{meta_description}}">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{meta_title}}">
+    <meta property="og:description" content="{{meta_description}}">
+
+    {{!-- Brand icon --}}
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+    <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    {{! Styles and Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/vno.css"}}" />
+    <link href="http://ghost-10039837.cos.myqcloud.com/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/tomorrow.css"}}">
+    
+    {{! Ghost Head }}
+    {{ghost_head}}
+    
+</head>
+<body class="{{body_class}}">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+
+    {{> side-panel}}
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+            {{{body}}}
+
+            {{> footer}}
+        </div>
+    </div>
+
+
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <!-- Compatibility for Ghost 0.7.0: http://dev.ghost.org/no-more-jquery/ -->
+    <script type="text/javascript" src="http://ghost-10039837.file.myqcloud.com/js/jquery-1.11.3.min.js"></script>
+
+    {{! Ghost Footer}}
+    {{ghost_foot}}
+
+
+    {{! The main JavaScript file }}
+    <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
+
+    {{! Highlight.js }}
+    <script type="text/javascript" src="http://ghost-10039837.file.myqcloud.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
