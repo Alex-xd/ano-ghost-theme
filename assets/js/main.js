@@ -17,6 +17,21 @@ $(document).ready(function () {
         }
     });
 
+    $('a.blog-button.homepage').click(function(){
+         // If already in blog, return early without animate overlay panel again.
+        if (location.hash && location.hash != "#blog") return;
+        if (!panelCover.hasClass('panel-cover--collapsed')) return;
+        $('.main-post-list').addClass('hidden');
+        currentWidth = panelCover.width();
+        if (currentWidth < 960) {
+            panelCover.removeClass('panel-cover--collapsed');
+            $('.content-wrapper').removeClass('animated slideInRight');
+        } else {
+            panelCover.css('max-width', currentWidth);
+            panelCover.animate({ 'max-width': 'none', 'width': '100%' }, 400, swing = 'swing', function () {});
+        }
+    });
+
     if (window.location.hash && window.location.hash == "#blog") {
         panelCover.addClass('panel-cover--collapsed');
         $('.main-post-list').removeClass('hidden');
