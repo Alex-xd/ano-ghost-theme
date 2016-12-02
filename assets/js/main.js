@@ -12,25 +12,34 @@ $(document).ready(function () {
     }
 
     function toHome() {
-        if (window.location.hash !== "#blog") {
-            return;
-        }
+        console.log(window.location.hash)
+        console.log('toHome')
+
         panelCover.removeClass('panel-cover--collapsed');
         wrapper.addClass('hidden');
         wrapper.removeClass('animated slideInRight');
+
     }
 
     function toBlog() {
-        if (window.location.hash === "#blog") {
-            return;
-        }
+        console.log('toBlog')
+        console.log(window.location.hash)
         panelCover.addClass('panel-cover--collapsed');
         wrapper.removeClass('hidden');
         wrapper.addClass('animated slideInRight');
+
     }
 
-    $('a.blog-button').click(toBlog);
-    $('a.blog-button.homepage').click(toHome);
+    $('#J_toblog').click(function () {
+        if (window.location.hash !== "#blog") {
+            toBlog();
+        }
+    });
+    $('#J_tohome').click(function () {
+        if (window.location.hash === "#blog") {
+            toHome();
+        }
+    });
 
     if (window.location.pathname.substring(0, 5) == "/tag/") {
         panelCover.addClass('panel-cover--collapsed');
