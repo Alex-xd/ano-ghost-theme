@@ -41,6 +41,12 @@
 // ------------------------------
 
 @media all and (max-width: 960px) {
+  .read-more {
+      display: none;
+  }
+  .footer__copyright {
+    text-align: left;
+  }
 
   .btn-mobile-menu {
     display: block;

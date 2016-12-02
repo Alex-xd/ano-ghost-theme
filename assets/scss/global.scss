@@ -1,9 +1,9 @@
 // ------------------------------
 // BASICS
 // ------------------------------
-
-html, body {
-  height: 100%;
+html,
+body {
+    height: 100%;
 }
 
 html {
@@ -12,36 +12,33 @@ html {
 }
 
 body {
-  font-family: $sans-font;
-  font-size: 1em;
-  color: $gray-darker;
-  -webkit-font-smoothing: antialiased;
+    font-family: $sans-font;
+    font-size: 1em;
+    color: $gray-darker;
+    -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: lighten($primary-color, 36%);
+    background: lighten($primary-color, 36%);
 }
 
 ::-moz-selection {
-  background: lighten($primary-color, 36%);
+    background: lighten($primary-color, 36%);
 }
 
 // ------------------------------
 // TYPOGRAPHY
 // ------------------------------
-
 a {
-  text-decoration: none;
-  color: $link-color;
-
-  &:hover {
-    color: $hover-color;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-  }
-
+    text-decoration: none;
+    color: $link-color;
+    &:hover {
+        color: $hover-color;
+        -o-transition: .5s;
+        -ms-transition: .5s;
+        -moz-transition: .5s;
+        -webkit-transition: .5s;
+    }
 }
 
 h1,
@@ -50,257 +47,259 @@ h3,
 h4,
 h5,
 h5 {
-  margin-top: 1.0em;
-  margin-bottom: .5em;
-  font-family: $serif-font;
-  font-weight: lighter;
-  color: $gray-darkest;
-  -webkit-font-smoothing: antialiased;
+    margin-top: 1.0em;
+    margin-bottom: .5em;
+    font-family: $serif-font;
+    font-weight: lighter;
+    color: $gray-darkest;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 2.5em;
-  line-height: 1.2em;
-  letter-spacing: .05em;
+    margin-top: 0;
+    font-size: 2.5em;
+    line-height: 1.2em;
+    letter-spacing: .05em;
 }
 
 h2 {
-  font-size: 2.0em;
+    font-size: 2.0em;
 }
 
 h3 {
-  font-size: 1.6em;
+    font-size: 1.6em;
 }
 
 h4 {
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 h4 {
-  font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 h5 {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 p {
-  margin-bottom: 1.3em;
-  line-height: 1.7em;
+    margin-bottom: 1.3em;
+    line-height: 1.7em;
 }
 
 strong {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 em {
-  font-style: italic;
+    font-style: italic;
 }
 
 blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
-  font-family: $serif-font;
-  font-weight: lighter;
-  font-size: 1em;
-  border-left: 3px solid $primary-color;
-
-  p {
-
-    &:last-child {
-      margin-bottom: 0;
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-family: $serif-font;
+    font-weight: lighter;
+    font-size: 1em;
+    border-left: 3px solid $primary-color;
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
-
-  }
-
 }
 
 // ------------------------------
 // BASIC STYLING
 // ------------------------------
-
-ol, ul {
-  margin: 0 0 1.3em 2.5em;
-
-  li {
-    margin: 0 0 .2em 0;
-    line-height: 1.6em;
-  }
-
-  ol, ul {
-    margin: .1em 0 .2em 2em;
-  }
-
+ol,
+ul {
+    margin: 0 0 1.3em 2.5em;
+    li {
+        margin: 0 0 .2em 0;
+        line-height: 1.6em;
+    }
+    ol,
+    ul {
+        margin: .1em 0 .2em 2em;
+    }
 }
 
 ol {
-  list-style-type: decimal;
+    list-style-type: decimal;
 }
 
 ul {
-  list-style-type: disc;
+    list-style-type: disc;
 }
 
 code {
-  padding: .1em .4em;
-  background: lighten($secondary-color, 32%);
-  border: 1px solid lighten($secondary-color, 25%);
-  border-radius: $border-radius;
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  font-size: .9em;
-  vertical-align: bottom;
-  word-wrap: break-word;
+    padding: .1em .4em;
+    background: lighten($secondary-color, 32%);
+    border: 1px solid lighten($secondary-color, 25%);
+    border-radius: $border-radius;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-size: .9em;
+    vertical-align: bottom;
+    word-wrap: break-word;
 }
 
 pre {
-  margin-bottom: 1.3em;
-  padding: 1em 2.5%;
-  background: lighten($secondary-color, 32%);
-  border: 1px solid lighten($secondary-color, 25%);
-  border-radius: $border-radius;
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  font-size: .9em;
-  font-weight: normal;
-  line-height: 1.3em;
-  overflow:scroll;
-
-  code {
-    padding: 0;
-    background: none;
-    border: none;
-    word-wrap: normal;
-  }
-
+    margin-bottom: 1.3em;
+    padding: 1em 2.5%;
+    background: lighten($secondary-color, 32%);
+    border: 1px solid lighten($secondary-color, 25%);
+    border-radius: $border-radius;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-size: .9em;
+    font-weight: normal;
+    line-height: 1.3em;
+    overflow: scroll;
+    code {
+        padding: 0;
+        background: none;
+        border: none;
+        word-wrap: normal;
+    }
 }
 
 .date,
 .time,
 .author,
 .tags {
-  font-size: .8em;
-  color: darken($gray, 2%);
-
-  a {
-    color: $gray-darker;
-
-    &:hover {
-      color: $hover-color;
+    font-size: .8em;
+    color: darken($gray, 2%);
+    a {
+        color: $gray-darker;
+        &:hover {
+            color: $hover-color;
+        }
     }
-
-  }
-
 }
 
 .excerpt {
-  margin: 0;
-  font-size: .9em;
-  color: $gray-dark;
+    margin: 0;
+    font-size: .9em;
+    color: $gray-dark;
 }
 
 .intro {
-  font-family: $serif-font;
-  font-size: 1.2em;
-  font-weight: lighter;
-  color: $gray-dark;
+    font-family: $serif-font;
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: $gray-dark;
 }
 
 .block-heading {
-  @include column(12);
-  position: relative;
-  bottom: -15px;
-  font-size: .8em;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+    @include column(12);
+    position: relative;
+    bottom: -15px;
+    font-size: .8em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .label {
-  position: relative;
-  display: inline-block;
-  padding: 8px 18px 9px 18px;
-  background: $primary-color;
-  border-radius: $border-radius;
-  text-align: center;
-  color: #FFF;
+    position: relative;
+    display: inline-block;
+    padding: 8px 18px 9px 18px;
+    background: $primary-color;
+    border-radius: $border-radius;
+    text-align: center;
+    color: #FFF;
 }
 
 // ------------------------------
 // MAIN LAYOUT
 // ------------------------------
-
 .container {
-  position: relative;
-  z-index: 500;
-  width: $total-width - $gutter-width;
-  margin: 0 auto;
+    position: relative;
+    z-index: 500;
+    width: $total-width - $gutter-width;
+    margin: 0 auto;
 }
 
 .content-wrapper {
-  z-index: 800;
-  width: 70%;
-  margin-left: 30%;
+    z-index: 800;
+    width: 72%;
+    margin-left: 28%;
 }
 
-  .content-wrapper__inner {
-    margin: 0 10%;
+.showup {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.upup {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 80px, 0);
+    -moz-transform: translate3d(0, 80px, 0);
+    -ms-transform: translate3d(0, 80px, 0);
+    -o-transform: translate3d(0, 80px, 0);
+    transform: translate3d(0, 80px, 0);
+    -webkit-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.content-wrapper__inner {
+    margin: 0 6%;
     padding: 50px 0;
-  }
+}
 
 .footer {
-  display: block;
-  padding: 2em 0 0 0;
-  border-top: 2px solid $gray-light;
-  font-size: .7em;
-  color: lighten($gray-dark, 10%);
+    display: block;
+    padding: 1.5em 0 0 0;
+    border-top: 2px solid $gray-light;
+    font-size: .7em;
+    color: lighten($gray-dark, 10%);
 }
 
-  .footer__copyright {
+.footer__copyright {
     display: block;
     margin-bottom: .7em;
-
+    text-align: right;
     a {
-      color: lighten($gray-dark, 5%);
-      text-decoration: underline;
-
-      &:hover {
-        color: $hover-color;
-      }
-
+        color: lighten($gray-dark, 5%);
+        text-decoration: underline;
+        &:hover {
+            color: $hover-color;
+        }
     }
-
-  }
+}
 
 // ------------------------------
 // AVATAR & LOGO
 // ------------------------------
-
 .avatar,
 .logo {
-  border-radius: 50%;
-  border: 3px solid #FFF;
-  box-shadow:0 0 1px 1px rgba(000,000,000,.3);
+    border-radius: 50%;
+    border: 3px solid #FFF;
+    box-shadow: 0 0 1px 1px rgba(000, 000, 000, .3);
 }
 
 // ------------------------------
 // DIVIDERS
 // ------------------------------
-
 hr {
-  border: none;
+    border: none;
 }
 
 .section-title__divider {
-  width: 30%;
-  margin: 2.2em 0 2.1em 0;
-  border-top: 1px solid $gray-light;
+    width: 30%;
+    margin: 2.2em 0 2.1em 0;
+    border-top: 1px solid $gray-light;
 }
 
 // ------------------------------
 // MISC STYLES / HELPERS
 // ------------------------------
-
 .hidden {
-  display: none !important;
+    display: none !important;
 }

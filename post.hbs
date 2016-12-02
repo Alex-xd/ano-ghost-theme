@@ -2,12 +2,12 @@
 
 {{#post}}
 
-  <article class="post-container post-container--single">
+  <article class="post-container post-container--single animated zoomInRight">
 
     <header class="post-header">
       <div class="post-meta">
         <time datetime="{{date format="DD MMM YYYY"}}" class="post-meta__date date">发表于 {{date format="DD MMM YYYY"}}</time> &#8226; <span class="post-meta__tags tags">{{tags prefix="标签 "}}</span>
-        <!--<span class="post-meta__author author"><img src="{{author.image}}" alt="profile image for {{author.name}}" class="avatar post-meta__avatar" /> by {{author.name}}</span>-->
+        {{!-- <span class="post-meta__author author"><img src="{{author.image}}" alt="profile image for {{author.name}}" class="avatar post-meta__avatar" /> by {{author.name}}</span> --}}
       </div>
       <h1 class="post-title">{{{title}}}</h1>
     </header>
@@ -15,27 +15,16 @@
     <section class="{{post_class}}">
       {{content}}
     </section>
-
-{{!--     <section class="index-post-demo">
-        {{content}}
-        <br/><br/>
-        <hr/>
-        <br/>
-        <B style="color: red">原文地址：<a target="_blank" href="{{url    absolute="true"}}">{{url    absolute="true"}}</a></B>
-        <br/>
-        <div class="alert alert-success">
-            <i class="fa fa-lightbulb-o"></i>本文由 <a href="http://i.alexxd.com">张博元</a>创作。可自由转载、引用，但需署名作者且注明文章出处。
-        </div>
-    </section> --}}
   </article>
   
   {{> read-more}}
 
 
+  <h3 class="recent-visitors"><span class="fa fa-child" style="position:relative;top:-1px;"></span> 最近访客</h3>
 
 <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="{{{id}}}" data-title="{{{title}}}" data-url="{{{url}}}" style="padding-bottom:50px;"></div>
+  <div class="ds-thread" data-thread-key="{{{id}}}" data-title="{{{title}}}" data-url="{{{url}}}" style="padding-bottom:100px;"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
