@@ -34,12 +34,12 @@
 
     {{! Styles and Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/vno.css"}}" />
-    <link href="https://ghost-10039837.file.myqcloud.com/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{asset "css/font-awesome.min.css"}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset "css/tomorrow.css"}}">
-    
+
     {{! Ghost Head }}
     {{ghost_head}}
-    
+
 </head>
 <body class="{{body_class}}">
 
@@ -65,7 +65,7 @@
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <!-- Compatibility for Ghost 0.7.0: http://dev.ghost.org/no-more-jquery/ -->
-    <script type="text/javascript" src="https://ghost-10039837.file.myqcloud.com/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/jquery-1.11.3.min.js"}}"></script>
 
     {{! Ghost Footer}}
     {{ghost_foot}}
@@ -75,7 +75,7 @@
     <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
 
     {{! Highlight.js }}
-    <script type="text/javascript" src="https://ghost-10039837.file.myqcloud.com/js/highlight.pack.js"></script>
+    <script type="text/javascript" src="{{asset "js/highlight.pack.js"}}"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
