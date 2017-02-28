@@ -1,38 +1,47 @@
-<header class="panel-cover {{#if post}}panel-cover--collapsed{{/if}}" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-  <div class="panel-main">
+<header class="panel-cover {{#if post}}panel-cover--collapsed{{/if}}"
+        {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div class="panel-main">
 
-    <div class="panel-main__inner panel-inverted">
-    <div class="panel-main__content">
+        <div class="panel-main__inner panel-inverted">
+            <div class="panel-main__content">
 
-        {{#if @blog.logo}}
-        <a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页"><img src="{{@blog.logo}}" width="80" alt="{{@blog.title}} logo" class="panel-cover__logo logo" /></a>
-        {{/if}}
-        <h1 class="panel-cover__title panel-title"><a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页">{{@blog.title}}</a></h1>
-        <span class="panel-cover__subtitle panel-subtitle">前端</span>
-        <hr class="panel-cover__divider" />
-        <p class="panel-cover__description">{{@blog.description}}</p>
-        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                {{#if @blog.logo}}
+                    <a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页"><img src="{{@blog.logo}}" width="80"
+                                                                                alt="{{@blog.title}} logo"
+                                                                                class="panel-cover__logo logo avatar"/></a>
+                {{/if}}
+                <h1 class="panel-cover__title panel-title slideIn">
+                    <a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页">{{@blog.title}}</a>
+                    <span class="panel-cover__subtitle panel-subtitle">前端</span>
+                </h1>
+                <hr class="panel-cover__divider"/>
+                <p class="panel-cover__description slideIn">{{@blog.description}}</p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary"/>
 
-        <div class="navigation-wrapper">
-          <div>
-          <nav class="cover-navigation cover-navigation--primary">
-            <ul class="navigation">
-              <li class="navigation__item"><a href="#" title="前往 {{@blog.title}} 的主页" class="blog-button" id="J_tohome">主页</a></li>
-              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button" id="J_toblog">博客</a></li>
-              <li class="navigation__item"><a href="https://github.com/Alex-xd" title="了解更多关于我">关于</a></li>
-              <li class="navigation__item"><a href="http://blog.alexxd.com/subscribe" title="邮件订阅本站">订阅</a></li>
-            </ul>
-          </nav>
-          </div>
-          <div>
-          {{> social}}
-          </div>
+                <div class="navigation-wrapper">
+                    <div class="slideIn">
+                        <nav class="cover-navigation cover-navigation--primary">
+                            <ul class="navigation">
+                                <li class="navigation__item"><a href="#" title="前往 {{@blog.title}} 的主页"
+                                                                class="blog-button" id="J_tohome">主页</a></li>
+                                <li class="navigation__item"><a href="#blog" title="访问博客" class="blog-button"
+                                                                id="J_toblog">博客</a></li>
+                                <li class="navigation__item"><a href="https://github.com/Alex-xd" title="了解更多关于我">关于</a>
+                                </li>
+                                <li class="navigation__item"><a href="http://blog.alexxd.com/subscribe" title="邮件订阅本站">订阅</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="slideIn">
+                        {{> social}}
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
-      </div>
-
+        <div class="panel-cover--overlay cover-slate"></div>
     </div>
-
-    <div class="panel-cover--overlay cover-slate"></div>
-  </div>
 </header>

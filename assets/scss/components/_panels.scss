@@ -16,12 +16,13 @@
     margin: 0 0 5px 0;
     font-size: 2.5em;
     letter-spacing: 4px;
-    color: #FFF;
+    color: #fff;
 }
 
 .panel-subtitle {
+    display: block;
     font-family: $serif-font;
-    font-size: 1.2em;
+    font-size: .6em;
     font-weight: lighter;
     letter-spacing: 3px;
     color: $gray;
@@ -38,9 +39,8 @@
     width: 100%;
     max-width: none;
     height: 100%;
-    // background: url(../images/background-cover.jpg) top left no-repeat $gray-darker;
     background-size: cover;
-    transition: width 0.8s cubic-bezier(0.79, -0.31, 0.21, 1.29);
+    transition: all 0.8s cubic-bezier(0.79, -0.31, 0.21, 1.29);
 }
 
 .panel-cover--collapsed {
@@ -68,7 +68,7 @@
 
 .panel-cover__divider {
     width: 50%;
-    margin: 20px auto;
+    margin: 12px auto;
     border-top: 1px solid rgba(255, 255, 255, .14);
 }
 
@@ -94,6 +94,8 @@
 }
 
 .panel-main__content {
+    position: relative;
+    top: -15px;
     max-width: 620px;
     margin: 0 auto;
 }
@@ -108,26 +110,18 @@
 .panel-inverted {
     font-weight: 100;
     text-align: center;
-    color: #FFF;
+    color: #fff;
     text-shadow: 0 1px 1px rgba(000, 000, 000, .4);
     a {
-        color: #FFF;
+        color: #fff;
     }
 }
 
 // ------------------------------
 // COVER NAVIGATION
 // ------------------------------
-.cover-navigation {
-    margin-top: 20px;
-}
-
-.cover-navigation--social {
-    margin-left: 30px;
-}
-
-.cover-navigation--primary {
-    margin-top: 18px;
+.cover-navigation.navigation--social {
+    margin-top: 15px;
 }
 
 // ------------------------------
