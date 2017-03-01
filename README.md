@@ -31,4 +31,4 @@ css依赖`bounce`，安装方式见官网[http://bourbon.io/](http://bourbon.io/
 
 监听
 
-`sass --watch assets/scss/vno.scss:assets/css/vno.css --style compressed`
+`sass --watch assets/scss/ano.scss:assets/css/ano.css --style compressed`
