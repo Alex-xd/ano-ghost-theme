@@ -40,6 +40,7 @@
 // ------------------------------
 
 @media all and (max-width: 960px) {
+    
     .menuicon {
         display: inline-block !important;
         z-index:9999;
@@ -146,12 +147,11 @@
         
         .navigation {
             display: block;
+            margin-top: 15px;
             width: 100%;
         }
         
         &.navigation--social {
-            padding-top: 5px;
-            
             .navigation {
                 li {
                     display: inline-block;
