@@ -14,50 +14,50 @@
       {{content}}
     </section>
   </article>
-  
+
   {{> read-more}}
 
 
-
-    <!--PC和WAP自适应版-->
-    <div id="SOHUCS" sid="{{id}}" ></div>
-    <script type="text/javascript">
-        (function(){
-            var appid = 'cysShHVYE';
-            var conf = 'prod_0056c198f820e45c1f5d95b9c941e98a';
-            var width = window.innerWidth || document.documentElement.clientWidth;
-            if (width < 960) {
-                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-
-
-
-
-
     {{!--
-    <h3 class="recent-visitors"><span class="fa fa-child" style="position:relative;top:-1px;"></span> 最近访客</h3>
+        <!--PC和WAP自适应版-->
+        <div id="SOHUCS" sid="{{id}}" ></div>
+        <script type="text/javascript">
+            (function(){
+                var appid = 'cysShHVYE';
+                var conf = 'prod_0056c198f820e45c1f5d95b9c941e98a';
+                var width = window.innerWidth || document.documentElement.clientWidth;
+                if (width < 960) {
+                    window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+      --}}
 
-<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
-  <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="{{{id}}}" data-title="{{{title}}}" data-url="{{{url}}}" style="padding-bottom:100px;"></div>
-  <!-- 多说评论框 end -->
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-  <script type="text/javascript">
-  var duoshuoQuery = {short_name:"handsomeboyuan"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-//    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//ghost-10039837.file.myqcloud.com/js/embed.js';
-      ds.src = '/assets/js/embed.js';
-      ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-    --}}
+
+
+
+
+        <h3 class="recent-visitors"><span class="fa fa-child" style="position:relative;top:-1px;"></span> 最近访客</h3>
+
+    <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+      <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="{{{title}}}+{{{id}}}" data-title="{{{title}}}" data-url="{{{url}}}" style="padding-bottom:100px;"></div>
+      <!-- 多说评论框 end -->
+      <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+      <script type="text/javascript">
+      var duoshuoQuery = {short_name:"handsomeboyuan"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+    //    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//ghost-10039837.file.myqcloud.com/js/embed.js';
+          ds.src = '/assets/js/embed.js';
+          ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+      </script>
+
 <!-- 多说公共JS代码 end -->
 
 
 
-  
-                        
+
+
 {{/post}}
