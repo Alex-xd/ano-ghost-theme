@@ -40,7 +40,9 @@
 // ------------------------------
 
 @media all and (max-width: 960px) {
-    
+    .beian .icp{
+        font-size: 8px !important;
+    }
     .menuicon {
         display: inline-block !important;
         z-index:9999;

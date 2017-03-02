@@ -1,7 +1,9 @@
 $(document).ready(function () {
-    var panelCover = $('.panel-cover'),
+    var $panelCover = $('.panel-cover'),
         $mainPost = $('.J_main-post-list'),
-        wrapper = $('.content-wrapper');
+        $wrapper = $('.content-wrapper'),
+        $menuicon = $('.menuicon'),
+        $beian = $('#J_beian');
 
     // 首页动画
     for (var i = 0, $slideIn = $('.slideIn'), len = $slideIn.length; i < len; i++) {
@@ -12,11 +14,12 @@ $(document).ready(function () {
         })(i);
     }
 
+    console.log(window.location.pathname.length)
     // 判断所在页面 （主页/博客）
     if (window.location.hash === '#blog') {
         toBlog();
     }
-    if (window.location.hash === '#') {
+    if (window.location.pathname.length <= 1 && (window.location.hash === '#' || window.location.hash === '')) {
         toHome();
     }
 
@@ -26,29 +29,32 @@ $(document).ready(function () {
             toBlog();
         }
     });
-    $('#J_tohome').click(function () {
-        if (window.location.hash !== "#") {
-            toHome();
-        }
-    });
-    $('#J_menuicon').on('click', function () {
-        if (window.location.hash !== "#") {
-            toHome();
-        }
-    });
+    // $('#J_tohome').click(function () {
+    //     if (window.location.hash !== "#") {
+    //         toHome();
+    //     }
+    // });
+    // $('#J_menuicon').on('click', function () {
+    //     if (window.location.hash !== "#") {
+    //         toHome();
+    //     }
+    // });
 
     // 抽象动作
     function toBlog() {
-        $('.menuicon').attr('style', '');
-        panelCover.addClass('panel-cover--collapsed');
+        $menuicon.removeClass('hidden');
+        $panelCover.addClass('panel-cover--collapsed');
         $mainPost.removeClass('hidden');
-        wrapper.addClass('animated slideInRight');
+        $beian.addClass('hidden');
+        $wrapper.addClass('animated slideInRight');
     }
+
     function toHome() {
-        $('.menuicon').attr('style', 'display:none !important;');
-        panelCover.removeClass('panel-cover--collapsed');
+        $menuicon.addClass('hidden');
+        $panelCover.removeClass('panel-cover--collapsed');
         $mainPost.addClass('hidden');
-        wrapper.removeClass('animated slideInRight');
+        $beian.removeClass('hidden');
+        $wrapper.removeClass('animated slideInRight');
     }
 });
 
