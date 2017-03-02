@@ -43,10 +43,6 @@
     .beian .icp{
         font-size: 8px !important;
     }
-    .menuicon {
-        display: inline-block !important;
-        z-index:9999;
-    }
     .homeicon {
         top: 1%;
     }
@@ -95,6 +91,7 @@
             width: 0;
             height: 0;
             opacity: 0;
+            z-index: 0;
             //display: block;
             //position: relative;
             //height: auto;

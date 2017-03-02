@@ -2,7 +2,7 @@ $(document).ready(function () {
     var $panelCover = $('.panel-cover'),
         $mainPost = $('.J_main-post-list'),
         $wrapper = $('.content-wrapper'),
-        $menuicon = $('.menuicon'),
+        $menuicon = $('#menuicon'),
         $beian = $('#J_beian');
 
     // 首页动画
@@ -14,7 +14,6 @@ $(document).ready(function () {
         })(i);
     }
 
-    console.log(window.location.pathname.length)
     // 判断所在页面 （主页/博客）
     if (window.location.hash === '#blog') {
         toBlog();

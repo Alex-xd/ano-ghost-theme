@@ -227,6 +227,7 @@ pre {
     z-index: 800;
     width: 72%;
     margin-left: 28%;
+    -webkit-overflow-scrolling: touch;
 }
 
 .showup {
@@ -253,6 +254,7 @@ pre {
 .content-wrapper__inner {
     margin: 0 6%;
     padding: 50px 0;
+    -webkit-overflow-scrolling: touch;
 }
 
 .footer {
