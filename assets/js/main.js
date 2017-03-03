@@ -45,7 +45,6 @@ $(document).ready(function () {
         $panelCover.addClass('panel-cover--collapsed');
         $mainPost.removeClass('hidden');
         $beian.addClass('hidden');
-        $wrapper.addClass('animated slideInRight');
     }
 
     function toHome() {
@@ -53,7 +52,6 @@ $(document).ready(function () {
         $panelCover.removeClass('panel-cover--collapsed');
         $mainPost.addClass('hidden');
         $beian.removeClass('hidden');
-        $wrapper.removeClass('animated slideInRight');
     }
 
     console.log('%c @ Alex-xd - 张博元      https://i.alexxd.com', 'padding-left:32px;line-height:32px;font-family:"Helvetica Neue",Helvetica,Arial,"Microsoft YaHei",sans-serif;color:#666;font-size:14px;');

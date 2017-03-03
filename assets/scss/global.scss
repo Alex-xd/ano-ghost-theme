@@ -216,13 +216,6 @@ pre {
 // ------------------------------
 // MAIN LAYOUT
 // ------------------------------
-.container {
-    position: relative;
-    z-index: 500;
-    width: $total-width - $gutter-width;
-    margin: 0 auto;
-}
-
 .content-wrapper {
     z-index: 800;
     width: 72%;
@@ -371,4 +364,9 @@ hr {
         border-bottom-right-radius: 83%;
         transform: rotate(5deg);
     }
+}
+
+.performance {
+    will-change: transform;
+    transform: translateZ(0);
 }
