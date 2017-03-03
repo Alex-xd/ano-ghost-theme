@@ -5,7 +5,7 @@
     <ol class="post-list">
       {{#foreach posts}}
       <li>
-        <h2 class="post-list__post-title post-title"><a href="{{url}}" title="link to {{{title}}}">{{{title}}}</a></h2>
+        <h2 class="post-list__post-title post-title"><a href="{{url}}#blog" title="{{{title}}}">{{{title}}}</a></h2>
         <p class="excerpt">{{excerpt characters="250"}}&hellip;</p>
         <div class="post-list__meta"><time datetime="{{date format="DD MMM YYYY"}}" class="post-list__meta--date date">于 {{date format="DD MMM YYYY"}}</time> &#8226; <span class="post-list__meta--tags tags">{{tags prefix="标签 "}}</span><a class="btn-border-small" href={{url}}>继续阅读</a></div>
         <hr class="post-list__divider" />
