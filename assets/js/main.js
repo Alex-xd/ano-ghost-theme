@@ -1,7 +1,6 @@
 $(document).ready(function () {
     var $panelCover = $('.panel-cover'),
         $mainPost = $('.J_main-post-list'),
-        $wrapper = $('.content-wrapper'),
         $menuicon = $('#menuicon'),
         $beian = $('#J_beian');
 
@@ -28,16 +27,6 @@ $(document).ready(function () {
             toBlog();
         }
     });
-    // $('#J_tohome').click(function () {
-    //     if (window.location.hash !== "#") {
-    //         toHome();
-    //     }
-    // });
-    // $('#J_menuicon').on('click', function () {
-    //     if (window.location.hash !== "#") {
-    //         toHome();
-    //     }
-    // });
 
     // 抽象动作
     function toBlog() {
