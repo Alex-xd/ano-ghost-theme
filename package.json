@@ -1,10 +1,13 @@
 {
   "name": "Ano",
   "version": "1.1.0",
-  "scripts":{
-    "dev":"sass --watch assets/scss/ano.scss:assets/css/ano.css --style compressed"
+  "scripts": {
+    "dev": "sass --watch assets/scss/ano.scss:assets/css/ano.css --style compressed",
+    "init": "./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact --force",
+    "commit": "git-cz"
   },
   "devDependencies": {
+    "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0"
   },
   "config": {

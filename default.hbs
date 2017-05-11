@@ -36,6 +36,11 @@
     <link href="{{asset "css/font-awesome.min.css"}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset "css/tomorrow.css"}}">
 
+    <script>
+    if (window.navigator.serviceWorker) {
+      window.navigator.serviceWorker.register('sw.js');
+    }
+    </script>
     {{! Ghost Head }}
     {{ghost_head}}
 
