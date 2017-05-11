@@ -1,15 +1,15 @@
 <header class="panel-cover performance {{#if post}}panel-cover--collapsed{{/if}}"
-        {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}} >
+        {{#if @blog.cover}}style="background-image: url({{asset 'images/github_bg.jpg'}})"{{/if}} >
     <div class="panel-main">
 
         <div class="panel-main__inner panel-inverted">
             <div class="panel-main__content">
 
-                {{#if @blog.logo}}
-                    <a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页"><img src="{{@blog.logo}}" width="80"
+                {{!-- {{#if @blog.logo}} --}}
+                <a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页"><img src="{{asset 'images/tou-xiang.png'}}" width="80"
                                                                                 alt="{{@blog.title}} logo"
                                                                                 class="panel-cover__logo logo avatar"/></a>
-                {{/if}}
+                {{!-- {{/if}} --}}
                 <h1 class="panel-cover__title panel-title slideIn">
                     <a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页">{{@blog.title}}</a>
                     <span class="panel-cover__subtitle panel-subtitle">前端</span>
