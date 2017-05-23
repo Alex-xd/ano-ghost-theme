@@ -9,7 +9,8 @@ var deployServer = http.createServer(function(request, response) {
 
     var commands = [
       'cd ' + PATH,
-      'git pull'
+      'git pull',
+      'pm2 restart ghost'
     ].join(' && ')
 
     exec(commands, function(err, out, code) {
