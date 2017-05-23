@@ -1,0 +1,14 @@
+{
+  "name": "deploy-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "deployBlog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "exec": "^0.2.1"
+  }
+}
